@@ -1,0 +1,10 @@
+<hibernate-mapping>
+<class name="xmlconfiguration.entity.Department" table="department_info">
+<id name="deptId" type="int" column="dept_id">
+<generator class="native"/>
+</id>
+<property name="deptName" type="java.lang.String" column="dept_name"/>
+<property name="deptCode" type="int" column="dept_code"/>
+<many-to-one name="student" class="xmlconfiguration.entity.Student" column="stud_id" cascade="all" unique="true"/>
+</class>
+</hibernate-mapping>
